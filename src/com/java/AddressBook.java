@@ -38,4 +38,32 @@ public class AddressBook {
 		return contacts;
 
 	}// end of add person method
-}
+
+	public void editPerson() {
+		System.out.println("Enter name to Edit");
+		String s = scanner.next();
+		AddressBook addressbook = new AddressBook();
+
+		for (int i = 0; i < personInformation.size(); i++) {
+			Contact person = (Contact) personInformation.get(i);
+			if (s.equals(person.getFirstName())) {
+				System.out.println(person);
+				person = addressbook.addPersonContact();/// calling add person to replace
+
+				for (int j = 0; j < personInformation.size(); j++) {
+					personInformation.set(j, person);
+				}
+			}
+		}
+
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Welcome to Address Book Program in AddressBookMain class");
+		AddressBook addresbook = new AddressBook();
+		addresbook.addPersonContact();
+		addresbook.editPerson();
+
+	}// end of main
+
+}/// end of class
