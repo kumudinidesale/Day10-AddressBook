@@ -38,4 +38,12 @@ public class AddressBook {
 		return contacts;
 
 	}// end of add person method
-}
+
+public static void main(String[] args) {
+		System.out.println("Welcome to Address Book Program in AddressBookMain class");
+		AddressBook addresbook = new AddressBook();
+		addresbook.addPersonContact();
+
+	}// end of main
+
+}/// end of class
