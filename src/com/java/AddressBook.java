@@ -1,41 +1,155 @@
-package com.java;
+package com.java
 
-import java.util.ArrayList;
-import java.util.Scanner;
+public class Contact {
 
-public class AddressBook {
-	static Scanner scanner = new Scanner(System.in);
-	ArrayList<Contact> personInformation = new ArrayList<Contact>();
+	private String firstName;
+	private String lastName;
+	private String address;
+	private String city;
+	private String state;
+	private String zip;
+	private String phoneNumber;
+	private String email;
 
-	// add new person record to array list after taking input
+	/**
+	 * @param firstName
+	 * @param lastName
+	 * @param address
+	 * @param city
+	 * @param state
+	 * @param zip
+	 * @param phoneNumber
+	 * @param email
+	 */
+	public Contact(String firstName, String lastName, String address, String city, String state, String zip,
+			String phoneNumber, String email) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+	}
 
-	public Contact addPersonContact() {
-		System.out.println("Enter the First Name");
-		String fName = scanner.next();
-		System.out.println("Enter the Last Name");
-		String lName = scanner.next();
-		System.out.println("Enter the Address");
-		String address = scanner.next();
-		System.out.println("Enter the City");
-		String city = scanner.next();
-		System.out.println("Enter the State");
-		String state = scanner.next();
-		System.out.println("Enter the Zip");
-		String zip = scanner.next();
-		System.out.println("Enter the PhoneNumber");
-		String phoneNumber = scanner.next();
-		System.out.println("Enter the Email");
-		String email = scanner.next();
-		// creating constructor
-		Contact contacts = new Contact(fName, lName, address, city, state, zip, phoneNumber, email);
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
 
-		// add the above list to to Contacts array list
-		personInformation.add(contacts);
+	/**
+	 * @param firstName the firstName to set
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-		// printing contacts object data inside
-		System.out.println(contacts);
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
 
-		return contacts;
+	/**
+	 * @param lastName the lastName to set
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-	}// end of add person method
+	/**
+	 * @return the address
+	 */
+	public String getAddress() {
+		return address;
+	}
+
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	/**
+	 * @return the city
+	 */
+	public String getCity() {
+		return city;
+	}
+
+	/**
+	 * @param city the city to set
+	 */
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	/**
+	 * @return the state
+	 */
+	public String getState() {
+		return state;
+	}
+
+	/**
+	 * @param state the state to set
+	 */
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	/**
+	 * @return the zip
+	 */
+	public String getZip() {
+		return zip;
+	}
+
+	/**
+	 * @param zip the zip to set
+	 */
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	/**
+	 * @return the phoneNumber
+	 */
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	/**
+	 * @param phoneNumber the phoneNumber to set
+	 */
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@Override
+	public String toString() {
+		return "Contact [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city
+				+ ", state=" + state + ", zip=" + zip + ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
+	}
+
 }
