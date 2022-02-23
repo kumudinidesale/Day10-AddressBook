@@ -73,12 +73,28 @@ public class AddressBook {
 
 	}
 
+	public void addMultiplePerson() {
+		while (true) {
+			System.out.println(
+					"Enter the option \n1)To Add Contect\n2)To Edit Contact" + "\n3)To Delete Contact\n4)exit");
+			int option = scanner.nextInt();
+			switch (option) {
+			case 1 -> addPersonContact();
+			case 2 -> editPerson();
+			case 3 -> deletePerson();
+			case 4 -> System.out.println("exiting");
+			default -> System.out.println("invalid option");
+			}
+			if (option == 4)
+				break;
+		}
+	}
+
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book Program in AddressBookMain class");
 		AddressBook addresbook = new AddressBook();
 		addresbook.addPersonContact();
-		addresbook.editPerson();
-		addresbook.deletePerson();
+		addresbook.addMultiplePerson();
 	}// end of main
 
 }/// end of class
